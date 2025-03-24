@@ -9,16 +9,51 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/style.css">
+<script src="https://kit.fontawesome.com/cdbdae0066.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  Features
-  Company
-  Careers
-  About
+  <nav class="nav">
+    <div class="wrapper">
+    <a href="index.html" class="nav__logo-link"><img src="./images/logo.svg" alt="website's logo" class="nav__logo"></a>
 
-  Login
-  Register
+    <button class="nav__burger-btn" aria-expanded="false"><div class="nav__burger-btn-box">
+      <span class="nav__burger-btn-bar nav__burger-btn-bar--top"></span>
+      <span class="nav__burger-btn-bar nav__burger-btn-bar--middle"></span>
+      <span class="nav__burger-btn-bar nav__burger-btn-bar--bottom"></span>
+    </div>
+  </button>
+
+  <ul class="nav__mobile">
+    <li class="nav__mobile-li nav__mobile-li--first">
+      <a href="#" class="nav__mobile-link">Features <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+
+      <ul class="nav__mobile-dropdown" aria-hidden="true">
+        <li class="nav__mobile-dropdown-li"><a href="#" class="nav__mobile-dropdown-link"><img src="./images/icon-todo.svg" width="14" height="16" alt="" class="nav__mobile-dropdown-icon">Todo List</a></li>
+        <li class="nav__mobile-dropdown-li"><a href="#" class="nav__mobile-dropdown-link"><img src="./images/icon-calendar.svg" width="16" height="16" alt="" class="nav__mobile-dropdown-icon"> Calendar</a></li>
+        <li class="nav__mobile-dropdown-li"><a href="#" class="nav__mobile-dropdown-link"><img src="./images/icon-reminders.svg" width="13" height="17" alt="" class="nav__mobile-dropdown-icon"> Reminders</a></li>
+        <li class="nav__mobile-dropdown-li"><a href="#" class="nav__mobile-dropdown-link"><img src="./images/icon-planning.svg" width="16" height="16" alt="" class="nav__mobile-dropdown-icon"> Planning</a></li>
+      </ul>
+    </li>
+    <li class="nav__mobile-li nav__mobile-li--second">
+      <a href="#" class="nav__mobile-link">Company <i class="fa-solid fa-chevron-down dropdown-arrow dropdown-arrow--second"></i></a>
+
+      <ul class="nav__mobile-dropdown nav__mobile-dropdown--second">
+        <li class="nav__mobile-dropdown-li"><a href="#" class="nav__mobile-dropdown-link">History</a></li>
+        <li class="nav__mobile-dropdown-li"><a href="#" class="nav__mobile-dropdown-link">Our Team</a></li>
+        <li class="nav__mobile-dropdown-li"><a href="#" class="nav__mobile-dropdown-link">Blog</a></li>
+      </ul>
+    </li>
+    <li class="nav__mobile-li"><a href="#" class="nav__mobile-link">Careers</a></li>
+    <li class="nav__mobile-li"><a href="#" class="nav__mobile-link">About</a></li>
+    <li class="nav__mobile-li"><a href="#" class="nav__mobile-link">Login</a></li>
+    <li class="nav__mobile-li"><a href="#" class="nav__mobile-link">Register</a></li>
+  </ul>
+
+</div>
+  </nav>
+
+  <!--
 
   Make remote work
 
@@ -26,10 +61,11 @@
   create team rituals, and watch productivity soar.
 
   Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+   -->
+<!-- 
+    Challenge by Frontend Mentor - https://www.frontendmentor.io?ref=challenge  -->
+<div class="overlay"></div>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

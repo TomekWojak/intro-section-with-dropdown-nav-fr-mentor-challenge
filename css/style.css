@@ -1,0 +1,209 @@
+@keyframes dropdownMobile {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nav__burger-btn {
+  padding: 2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 100;
+}
+.nav__burger-btn.active .nav__burger-btn-bar--top {
+  transform: translateY(10.5px) rotate(45deg);
+}
+.nav__burger-btn.active .nav__burger-btn-bar--middle {
+  opacity: 0;
+}
+.nav__burger-btn.active .nav__burger-btn-bar--bottom {
+  transform: translateY(-10.5px) rotate(-45deg);
+}
+.nav__burger-btn-box {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+.nav__burger-btn-bar {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  left: 0;
+  background-color: var(--blackColor);
+  transition: transform 0.4s, opacity 0.4s;
+}
+.nav__burger-btn-bar--top {
+  top: 7px;
+}
+.nav__burger-btn-bar--middle {
+  top: 17.5px;
+}
+.nav__burger-btn-bar--bottom {
+  top: 28px;
+}
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --whiteColor: hsl(0, 0%, 98%);
+  --grayColor: hsl(0, 0%, 41%);
+  --blackColor: hsl(0, 0%, 8%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  position: relative;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+.overlay.visible {
+  display: block;
+}
+
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.nav .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav__mobile {
+  padding: 2em;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: var(--whiteColor);
+  list-style-type: none;
+  transform: translateX(150%);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5176470588);
+  transition: transform 0.4s;
+}
+.nav__mobile.collapsed {
+  transform: translateX(0);
+}
+.nav__logo-link {
+  padding: 2em;
+}
+.nav__mobile-dropdown {
+  list-style-type: none;
+}
+.nav__mobile-dropdown-li {
+  display: none;
+  opacity: 0;
+}
+.nav__mobile-dropdown-li:first-child {
+  padding: 1.5em 0 0;
+}
+.nav__mobile-dropdown-li.active {
+  display: block;
+  animation: dropdownMobile 0.4s forwards;
+}
+.nav__mobile-dropdown-link {
+  display: block;
+  text-decoration: none;
+  color: var(--grayColor);
+  font-weight: 500;
+  padding: 0.7em 2em;
+  transition: color 0.3s;
+}
+.nav__mobile-dropdown-link:hover {
+  color: var(--blackColor);
+}
+.nav__mobile-dropdown-icon {
+  margin-inline-end: 1em;
+  vertical-align: middle;
+}
+.nav__mobile-li {
+  padding: 1em;
+  font-size: 1.6rem;
+}
+.nav__mobile-li:nth-child(5) {
+  padding: 0;
+  align-self: center;
+  margin-block-start: 1em;
+}
+.nav__mobile-li:nth-child(5) .nav__mobile-link {
+  display: block;
+  padding: 1em 2em;
+}
+.nav__mobile-li:nth-child(6) {
+  width: 100%;
+  padding: 0;
+  align-self: center;
+}
+.nav__mobile-li:nth-child(6) .nav__mobile-link {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  padding: 1em 2em;
+  border: 2px solid var(--grayColor);
+  border-radius: 20px;
+  transition: color 0.3s, background-color 0.3s;
+}
+.nav__mobile-li:nth-child(6) .nav__mobile-link:hover {
+  background-color: var(--blackColor);
+  color: var(--whiteColor);
+  border: 2px solid var(--blackColor);
+}
+.nav__mobile-li .dropdown-arrow {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  margin-inline-start: 0.8em;
+  transition: transform 0.2s;
+}
+.nav__mobile-li .dropdown-arrow.rotated {
+  transform: rotate(180deg);
+}
+.nav__mobile-link {
+  text-decoration: none;
+  color: var(--grayColor);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav__mobile-link:hover {
+  color: var(--blackColor);
+}
+
+@media (350px <= width) {
+  .nav__mobile {
+    width: 300px;
+    left: unset;
+    right: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
